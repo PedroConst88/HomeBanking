@@ -1,0 +1,128 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .logo_img {
+    background: url('src/assets/homebanking-icon.png');
+    right: 0;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+  }
+  .dashboard-menu{
+    height: 15vh;
+    background: #3F51B5;
+    background: radial-gradient(circle, rgba(97,149,201,1) 0%, rgba(97,149,201,1) 11%, rgba(107,159,191,1) 100%);
+  }
+  .accountText p{
+    color: white;
+    font-weight: 200;
+    font-size: 14px;
+  }
+
+ .accountText h2{
+    color: white;
+    font-weight: 400;
+    font-size: 30px;
+  }
+
+
+  .transfer {
+    margin: 16px auto;
+    font-size: 16px;
+  }
+
+.transfer button{
+  height:30px;
+  width:40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+  background-color: #666666;
+  border-radius: 25px;
+  border: 1px solid black;
+}
+
+  
+  .transfer-header,
+  .transfer p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .transfer-triangle {
+    width: 0;
+    margin-right: auto;
+    margin-left: auto;
+    border: 12px solid transparent;
+    border-bottom-color: rgb(15, 66, 107);
+  }
+  
+  .transfer-header {
+    padding: 20px;
+    font-size: 1.4em;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(21, 68, 112);
+  }
+  
+  .transfer-container {
+    background: #ebebeb;
+    padding: 12px;
+  }
+  
+  .transfer p {
+    padding: 12px;
+  }
+  
+  .transfer input {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    padding: 16px;
+    outline: 0;
+    font-family: inherit;
+    font-size: 0.95em;
+  }
+  
+  .transfer input[type="text"],
+  .transfer input[type="number"] {
+    background: #fff;
+    border-color: #bbb;
+    color: #555;
+  }
+  
+  .transfer input[type="text"]:focus,
+  .transfer input[type="number"]:focus {
+    border-color: #888;
+  }
+  
+  .transfer input[type="submit"] {
+    background: rgb(1, 29, 51);
+    border-color: transparent;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .transfer input[type="submit"]:hover {
+    background: rgb(0, 35, 65);
+  }
+  
+  .transfer input[type="submit"]:focus {
+    border-color: #05a;
+  }
+  
+  .has-error input[type="text"],
+  .has-error input[type="number"] {
+      border-color: rgb(216, 12, 12);
+      color: rgb(230, 14, 14);
+  }
+
+  

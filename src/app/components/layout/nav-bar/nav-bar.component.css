@@ -1,0 +1,105 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.mat-sidenav{
+  background-color: rgba(97, 149, 201, 1);
+}
+
+.mat-sidenav a{
+  color: white;
+  font-weight: 300;
+}
+
+.hidden{
+  display: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: auto;
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+  padding: 0px;
+}
+
+.main-menu{
+  height: 12vh;
+  background: rgba(97, 149, 201, 1);
+  background: radial-gradient(circle, rgba(97,149,201, 1) 0%, rgba(97,149,201, 1) 11%, rgba(107,159,191, 1) 100%);
+  box-shadow: 0 5px 40px rgba(0,0,0,.2);
+}
+
+.main-menu a {
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+  margin: 0 10px;
+  text-decoration: none;
+}
+.logo_img {
+  background: url('src/assets/homebanking-logo.png');
+  right: 0;
+  bottom: 0;
+  width: 200px;
+  height: 50px;
+  background-size: cover;
+}
+
+.top-nav{
+  margin: 0;
+  height: 3vh;
+}
+
+.top-header button {
+  font-size: 12px;
+  color: black;
+  font-weight: 700;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.dashboard-menu{
+  height: 15vh;
+  background: rgb(97,149,201);
+  background: radial-gradient(circle, rgba(97,149,201,1) 0%, rgba(97,149,201,1) 11%, rgba(107,159,191,1) 100%);
+}
+.dashboard-topnav{
+  margin: 0;
+  height: 5vh;
+}
+
+.accountText p{
+  color: white;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+h2{
+  color: white;
+  font-weight: 400;
+  font-size: 30px;
+}

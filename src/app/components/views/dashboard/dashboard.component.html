@@ -1,0 +1,59 @@
+<app-top-nav></app-top-nav>
+
+
+<mat-toolbar class="dashboard-menu">
+  <div class="container" fxLayout="row">
+    <div fxLayout="column" fxFlex fxLayoutAlign="center center">
+    <div class="accountText">
+    <p>Saldo Disponível:</p>
+    </div>
+    <div class="accountText">
+      <h2>{{transactions.latestSaldo | currency:'EUR':'code'}}</h2>
+      </div>
+    </div>
+</div>
+</mat-toolbar>
+
+<div class="container" fxLayout="row" fxLayout.xs="column">
+  <div fxFlex="65" fxFlex.xs="100">
+    <div fxLayoutAlign="end start">
+      <button class="btt-transfer" [routerLink]="['/transacao']" mat-button aria-label="Example icon-button with share icon"> 
+        Nova Operação
+      </button>
+    </div>
+    <div  fxLayoutAlign="start start">
+      <div class="mat-h2">Últimas Operações:</div>
+    </div>
+    <div  fxLayoutAlign="space-between start">
+      <table >
+        <!-- Item Column -->
+        <ng-container matColumnDef="operacao">
+          <th  *matHeaderCellDef> Operação </th>
+          <td  *matCellDef="let op of transactionsList"> {{op.operacao | currency:'EUR'}} </td>
+          <td *matFooterCellDef> Total </td>
+        </ng-container>
+      
+        <!-- Cost Column -->
+        <ng-container matColumnDef="saldo">
+          <th  *matHeaderCellDef> Saldo </th>
+          <td *matCellDef="let op of transactionsList"> {{op.saldo | currency:'EUR'}} </td>
+          <td *matFooterCellDef> {{transactions.latestSaldo | currency:'EUR' }} </td>
+          <td  *matFooterCellDef> Data </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr>
+      </table>
+    </div>
+</div>
+  <div fxFlex="35" fxFlex.xs="100">
+    <div fxLayoutAlign="center start">
+      <img src="/assets/user.png" alt="image">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="settings"></mat-icon>
+    </div>
+    <div fxLayoutAlign="center start">
+      <h2>{{ this.currentUser.name }}</h2>
+    </div>
+  </div>
+</div>

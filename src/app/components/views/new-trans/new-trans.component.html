@@ -1,0 +1,53 @@
+<app-top-nav></app-top-nav>
+
+
+<mat-toolbar class="dashboard-menu">
+  <div class="container" fxLayout="row">
+    <div fxLayout="column" fxFlex fxLayoutAlign="center center">
+      <div class="accountText">
+        <p>Saldo Disponível:</p>
+      </div>
+      <div class="accountText">
+        <h2>{{getTotalCost() | currency}} €</h2>
+      </div>
+    </div>
+  </div>
+</mat-toolbar>
+
+
+<div class="transfer container">
+  <button mat-button class="example-icon" aria-label="Example icon-button with share icon" (click)="backClicked()" fxLayout fxLayoutAlign="start center">
+    Voltar
+  </button>
+  <mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Depositar">
+      <h2 class="transfer-header">Depositar Fundos</h2>
+      <form [formGroup]="transferForm" class="transfer-container" (ngSubmit)="AddTransfer()">
+        <p [ngClass]="{ 'has-error': isSubmitted && formControls['cost'].errors }">
+          <input type="number" placeholder="cost" formControlName="cost">
+        </p>
+        <div *ngIf="isSubmitted && formControls['cost'].errors" class="help-block">
+          <div *ngIf="formControls['cost'].errors['required']">Valor</div>
+        </div>
+        <p>
+          <input type="submit" value="Add">
+        </p>
+      </form>
+    </mat-tab>
+    <mat-tab label="Retirar">
+      <h2 class="transfer-header">Retirar Fundos</h2>
+      <form [formGroup]="transferForm" class="transfer-container" (ngSubmit)="AddTransfer()">
+        <p [ngClass]="{ 'has-error': isSubmitted && formControls['cost'].errors }">
+          <input type="number" placeholder="cost" formControlName="cost">
+        </p>
+        <div *ngIf="isSubmitted && formControls['cost'].errors" class="help-block">
+          <div *ngIf="formControls['cost'].errors['required']">Valor</div>
+        </div>
+        <p>
+          <input type="submit" value="Add">
+        </p>
+      </form>
+    </mat-tab>
+  </mat-tab-group>
+
+</div>

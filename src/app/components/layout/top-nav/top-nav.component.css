@@ -1,0 +1,27 @@
+.dashboard-topnav {
+    margin: 0;
+    height: 5vh;
+}
+
+.logo_img {
+    background: url('src/assets/homebanking-icon.png');
+    right: 0;
+    bottom: 0;
+    width: 200px;
+    height: 50px;
+    background-size: cover;
+  }
+
+mat-toolbar button {
+    height:30px;
+    width:40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    background-color: #666666;
+    border-radius: 25px;
+    border: 1px solid black;
+}
